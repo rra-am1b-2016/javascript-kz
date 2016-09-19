@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style>
+            body
+            {
+                font-family: Verdana, Arial;
+            }
+            
+            a
+            {
+                font-size: 0.6em;
+            }
+        </style>
+        <script>
+            alert("Hallo Wereld! Dit is mijn eerste javascript");
+                        
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript tutorial</h1>
+        <p id="tekst">Deze tekst wordt verandert</p>
+
+        <button onclick="document.getElementById('tekst').innerHTML = 'Dit is wat nieuwe tekst'; ">
+            Klik op mij!
+        </button>
+
+        <script>
+            // Dit is de code voor het genereren van output
+            document.write("Dit is ook een leuke manier om javascript weer te geven");
+            
+            /* Met console.log() 
+               kun je tekst naar de console
+               van de browser sturen */
+
+            console.log("Dit is wat tekst voor de console van de browser");            
+        </script>
+        <hr>
+        <a href="index.html">terug naar index</a>
+    </body>
+</html>
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style>
+            body
+            {
+                font-family: Verdana;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Javascript Array's</h1>
+            <!-- Welkom html -->
+
+        <script>
+            /* Welkom JS */
+            document.write("<h3>Maken van het array en weergeven</h3><hr>");
+            var bikesAndCars = ["Fiat", "Mercedes", "Yamaha", 'Ducati'];
+
+            document.write("De eerste waarde in mijn array bikesAndCars is: " + bikesAndCars[0] + "<br>");
+            document.write("De tweede waarde in mijn array bikesAndCars is: " + bikesAndCars[1] + "<br>");
+            document.write("De derde waarde in mijn array bikesAndCars is: " + bikesAndCars[2] + "<br>");
+            document.write("De vierde waarde in mijn array bikesAndCars is: " + bikesAndCars[3] + "<br>");
+
+            document.write("<hr>");
+            
+            // Je kunt een waarde toevoegen aan het einde van een array met de function push
+            // Je krijgt dan het aantal elementen dat in het array zit terug
+            var aantalElementenInArray = bikesAndCars.push("Honda");
+            alert(aantalElementenInArray);
+            
+            // Door het noemen van de naam van het array zonder haakjes krijg je de volledige inhoud te zien
+            document.write(bikesAndCars);
+            document.write("<br>")
+            // Je kunt een waarde verwijderen aan het einde van een array met de function pop
+            // Je krijgt dan het aantal elementen dat in het array zit terug
+
+            var hetVerwijderdeElementIs = bikesAndCars.pop();
+            document.write("Het laatste element is nu verwijdert uit het array: " + bikesAndCars + "<br>");
+            document.write("Het verwijderde element is: " + hetVerwijderdeElementIs + "<br>");
+            
+
+            // shift("Ferrari"); unshift();
+
+            document.write("<h3>Het verwijderen van een element aan het begin van een array</h3><hr>");
+            document.write(bikesAndCars + "<br>");
+            var verwijderdeElement = bikesAndCars.shift();
+            document.write("Het verwijderde element aan het begin van het array is: "
+                                 + verwijderdeElement);
+            document.write("<hr>");
+
+            document.write("<h3>Het toevoegen van een element aan het begin van een array met shift() en unshift()</h3><hr>");
+            document.write(bikesAndCars + "<br>");
+            var aantal = bikesAndCars.unshift("Ferrari");
+            document.write("Het aantal elementen in het array is: "
+                                 + aantal + "<br>");
+            document.write(bikesAndCars + "<br>");
+            document.write("<hr>");
+
+
+            document.write("<h3>Het verwijderen van elementen in het midden van een array doe je met splice()</h3><hr>");
+            document.write(bikesAndCars + "<br>");
+            document.write("Ik voeg Audi en Harley Davidson toe in het midden van het array<br>");
+            bikesAndCars.splice(2, 0, "Audi", "Harley Davidson");
+            document.write(bikesAndCars + "<br>");
+            document.write("Ik voeg verwijder Harley Davidson uit het array<br>");
+            
+            bikesAndCars.splice(3, 1);
+            document.write(bikesAndCars + "<br>");
+            
+
+            document.write("<h3>Het in twee stukken knippen van een array met slice()</h3><hr>");
+            document.write("Dit is het array bikesAndCars: " + bikesAndCars + "<br>");
+            var bikes = bikesAndCars.slice(3,5);
+            document.write("Het bikes array heeft de volgende elementen:" + bikes.toString() + "<br>" )
+             
+            
+            
+        </script>
+
+    </body>
+</html>
