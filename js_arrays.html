@@ -73,8 +73,21 @@
             document.write("<h3>Het in twee stukken knippen van een array met slice()</h3><hr>");
             document.write("Dit is het array bikesAndCars: " + bikesAndCars + "<br>");
             var bikes = bikesAndCars.slice(3,5);
-            document.write("Het bikes array heeft de volgende elementen:" + bikes.toString() + "<br>" )
-             
+            document.write("Het bikes array heeft de volgende elementen:" + bikes.toString() + "<br>" );
+            var cars = bikesAndCars.slice(0, 3);
+            document.write("Het cars array heeft de volgende elementen: " + cars.toString() + "<br>");
+            document.write("Het bikesAndCars array is veranderd: " + bikesAndCars.toString() + "<br>");
+            
+
+            document.write("<h3>Het sorteren van een array met sort() en reverse()</h3><hr>");
+            document.write("Dit is het ongesorteerde array bikesAndCars: " + bikesAndCars + "<br>");
+            var bikesAndCars = bikesAndCars.sort();
+            document.write("Het bikes gesorteerde (A->Z) array heeft de volgende elementen:" + bikesAndCars.toString() + "<br>" );
+            var bikesAndCars = bikesAndCars.reverse();
+            document.write("Het array bikesAndCars wordt nu in omgekeerde volgorde (Z->A) gesorteerd: " + bikesAndCars.toString() + "<br>");
+            
+            
+            
             
             
         </script>
