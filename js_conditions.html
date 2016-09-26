@@ -22,22 +22,22 @@
                 //Alle code tussen de accolades wordt uitgevoerd wanneer de bewering waar is.
                 document.write("Het zwembadwater is ijskoud <br>");
             }
-            if ( (temperatuur > 10) && (temperatuur <= 20) )
+            else if ( (temperatuur > 10) && (temperatuur <= 20) )
             {
                 //Alle code tussen de accolades wordt uitgevoerd wanneer de bewering waar is.
                 document.write("Het zwembadwater is koud<br>");
             }
-            if ( (temperatuur > 20) && (temperatuur <= 30) )
+            else if ( (temperatuur > 20) && (temperatuur <= 30) )
             {
                 //Alle code tussen de accolades wordt uitgevoerd wanneer de bewering waar is.
                 document.write("Het zwembadwater is lauw<br>");
             }
-            if ( (temperatuur > 30) && (temperatuur <= 40) )
+            else if ( (temperatuur > 30) && (temperatuur <= 40) )
             {
                 //Alle code tussen de accolades wordt uitgevoerd wanneer de bewering waar is.
                 document.write("Het zwembadwater is warm<br>");
             }
-            if ( (temperatuur > 40) && (temperatuur <= 50) )
+            else if ( (temperatuur > 40) && (temperatuur <= 50) )
             {
                 //Alle code tussen de accolades wordt uitgevoerd wanneer de bewering waar is.
                 document.write("Het zwembadwater is heet<br>");
@@ -46,6 +46,52 @@
             {
                 document.write("Het zwembadwater is gevaarlijk heet, niet zwemmen<br>");                
             }
+
+
+            var bmi;
+            var massa = 727;
+            var lengte = 1.7;
+
+            bmi = massa / Math.pow(lengte, 2);
+
+            bmi = Math.round(bmi);
+
+            console.log(bmi);
+
+            if (bmi < 18.5)
+            {
+                document.write("Met een gewicht van " + massa + " kg en een lengte van " + lengte + " m is uw BMI = " + bmi + "<br>");
+                document.write("U heeft ondergewicht<br>");
+            }
+            else if ( bmi >= 18.5 && bmi < 25)
+            {
+                document.write("Met een gewicht van " + massa + " kg en een lengte van " + lengte + " m is uw BMI = " + bmi + "<br>");
+                document.write("U heeft een normaal gewicht<br>");
+            }
+            else if ( bmi >= 25 && bmi < 27)
+            {
+                document.write("Met een gewicht van " + massa + " kg en een lengte van " + lengte + " m is uw BMI = " + bmi + "<br>");
+                document.write("U heeft licht overgewicht<br>");
+            }
+            else if ( bmi >= 27 && bmi < 30)
+            {
+                document.write("Met een gewicht van " + massa + " kg en een lengte van " + lengte + " m is uw BMI = " + bmi + "<br>");
+                document.write("U heeft matig overgewicht<br>");
+            }
+            else if ( bmi >= 30 && bmi < 40)
+            {
+                document.write("Met een gewicht van " + massa + " kg en een lengte van " + lengte + " m is uw BMI = " + bmi + "<br>");
+                document.write("U heeft ernstig overgewicht<br>");
+            }
+            else
+            {
+                document.write("Met een gewicht van " + massa + " kg en een lengte van " + lengte + " m is uw BMI = " + bmi + "<br>");
+                document.write("U heeft ziekelijk overgewicht<br>");
+            }
+
+
+
+
 
         
 
