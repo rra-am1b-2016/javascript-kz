@@ -23,12 +23,15 @@
                 document.write( i + " x 7 =" + i*7 + "<br>");
             }
 
-            var k_max = 8;
+            var k_max = 4;
             
-            for (var k = 0; k < k_max; k = k + 1 )
+            for (var k = 0; k <= k_max; k = k + 1 )
             {
                 
-                document.write("<div style=\"background-color: rgb(0, " + k * Math.round(255 / k_max) + ", 0); width: 200px; height: 50px; margin-bottom: 1em;\"></div>");
+                document.write("<div style=\"background-color: rgb(" + k * Math.round(255 / k_max) + ", " + 
+                                    k * Math.round(255 / k_max) + ", 0); width: " +
+                                    k * Math.round(100 / k_max) + "%; height: " + k * Math.round(2 / k_max) + "em; margin-bottom: 1em; font-size: " +
+                                    k * Math.round(4 / k_max) + "em;\">Test</div>");
             }
            
         </script>
