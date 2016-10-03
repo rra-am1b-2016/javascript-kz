@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style>
+            body
+            {
+                font-family: Verdana;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Javascript While Loop</h1>
+        
+        <script>
+            var auto = ["Honda", "Fiat", "Mercedes", "BMW", "Daf", "Ford"];
+            document.write(auto[0]);
+            var i = 0;
+            document.write("<ol>")
+            while( i < 50)
+            {
+                var index = i % 6;
+                //alert(test);
+                document.write("<li>" + auto[index] + "</li>");
+                i += 1;
+            }
+             document.write("</ol>")
+
+        </script>
+    </body>
+</html>
