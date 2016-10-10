@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style>
+            body
+            {
+                font-family: Verdana;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Javascript While Loop met break en auto's</h1>
+        
+        <script>
+            var auto = ["Honda", "Fiat", "Mercedes", "BMW", "Daf", "Ford", "Ferrari", "Bugatti", "Alpha Romeo" ];
+            
+            var i = 0;
+            document.write("<ol>")
+            while( i < 30)
+            {                
+                var index = Math.random() * 9;
+                var index = Math.floor(index);
+
+                if ( auto[index] == "Fiat")
+                {
+                    //document.write("index heeft nu de waarde 2, Deze heeft de waarde: " + auto[index]);                    
+                    continue;
+                }
+                document.write("<li>" + auto[index] + "</li>");
+                i += 1;
+            }
+            document.write("</ol>");
+        </script>
+
+        <h1>Javascript While Loop met continue en fruit</h1>
+
+        <script>
+            var auto = ["Banaan", "Sinaasappel", "Druiven", "Kiwi", "Appel", "Dadel", "Bosbessen", "Aardbei", "Meloen"];
+            
+            var i = 0;
+            document.write("<ol>")
+            while( i < 30)
+            {                
+                var index = Math.random() * 9;
+                var index = Math.floor(index);
+
+                if ( auto[index] == "Fiat")
+                {
+                    //document.write("index heeft nu de waarde 2, Deze heeft de waarde: " + auto[index]);                    
+                    continue;
+                }
+                document.write("<li>" + auto[index] + "</li>");
+                i += 1;
+            }
+            document.write("</ol>");
+        </script>
+
+
+    </body>
+</html>
