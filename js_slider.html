@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style>
+            body
+            {
+                font-family: Verdana;
+            }
+            input[type="text"]
+            {
+                width: 1.3em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Diplomarendement</h1>
+        
+        <table>
+            <tr>
+                <td>
+                    jaar 1: 
+                </td>
+                <td>
+                    <input type="range" min="0" max="50" id="firstyear" value="50" onchange="showValue1();">
+                </td>
+                <td>
+                    <input type="text" id="val1" width="12px" value="50" onchange="changeSliderMax1();">
+                </td>
+                <td>
+                    <input type="text" id="val2" width="12px" value="0" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    jaar 2: 
+                </td>
+                <td>
+                    <input type="range" min="0" max="50" id="secondyear" value="50" onchange="showValue2()">
+                </td>
+                <td>
+                    <input type="text" id="val3" width="12px" value="50" onchange="changeSliderMax2();">
+                </td>
+                <td>
+                    <input type="text" id="val4" width="12px" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    jaar 3: 
+                </td>
+                <td>
+                    <input type="range" min="0" max="50" id="thirdyear" value="50" onchange="showValue3()">
+                </td>
+                <td>
+                    <input type="text" id="val5" width="12px" value="50" onchange="changeSliderMax3();">
+                </td>
+                <td>
+                    <input type="text" id="val6" width="12px" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    jaar 4: 
+                </td>
+                <td>
+                    <input type="range" min="0" max="50" id="fourthyear" value="50" onchange="showValue4()">
+                </td>
+                <td>
+                    <input type="text" id="val7" width="12px" value="50" onchange="changeSliderMax4();">
+                </td>
+                <td>
+                    <input type="text" id="val8" width="12px" value="0">
+                </td>
+            </tr>
+        </table>
+
+ 
+        <script>
+            var handle1 = document.getElementById("firstyear");
+            var value1 = document.getElementById("val1");
+            var value2 = document.getElementById("val2");
+
+            var handle2 = document.getElementById("secondyear");
+            var value3 = document.getElementById("val3");
+            var value4 = document.getElementById("val4");
+
+            var handle3 = document.getElementById("thirdyear");
+            var value5 = document.getElementById("val5");
+            var value6 = document.getElementById("val6");
+
+            var handle4 = document.getElementById("fourthyear");
+            var value7 = document.getElementById("val7");
+            var value8 = document.getElementById("val8");
+
+            //alert(handle.value)
+            function showValue1()
+            {
+                value1.value = handle1.value;
+                value2.value = handle1.getAttribute("max") - value1.value;
+            }
+
+            function changeSliderMax1()
+            {
+                handle1.setAttribute("max", value1.value);
+                var newMax = handle1.getAttribute("max");
+                alert(newMax);
+            }
+
+            function changeSliderMax2()
+            {
+                handle2.setAttribute("max", value3.value);
+                var newMax = handle2.getAttribute("max");
+                alert(newMax);
+            }
+
+            function changeSliderMax3()
+            {
+                handle3.setAttribute("max", value5.value);
+                var newMax = handle3.getAttribute("max");
+                alert(newMax);
+            }
+
+            function changeSliderMax4()
+            {
+                handle4.setAttribute("max", value7.value);
+                var newMax = handle4.getAttribute("max");
+                alert(newMax);
+            }
+
+            function showValue2()
+            {
+                value3.value = handle2.value;
+                value4.value = handle2.getAttribute("max") - value3.value;
+            }
+
+            function showValue3()
+            {
+                value5.value = handle3.value;
+                value6.value = handle3.getAttribute("max") - value5.value;
+            }
+
+            function showValue4()
+            {
+                value7.value = handle4.value;
+                value8.value = handle4.getAttribute("max") - value7.value;
+            }
+        </script>
+    </body>
+</html>

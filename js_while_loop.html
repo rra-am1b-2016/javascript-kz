@@ -13,14 +13,18 @@
         <h1>Javascript While Loop</h1>
         
         <script>
-            var auto = ["Honda", "Fiat", "Mercedes", "BMW", "Daf", "Ford"];
-            document.write(auto[0]);
+            var auto = ["Honda", "Fiat", "Mercedes", "BMW", "Daf", "Ford", "Ferrari", "Bugatti", "Alpha Romeo" ];
+            var kommaGetal = 8.82546;
+            document.write("Dit is een komma getal: " + kommaGetal + "<br>");
+            document.write("De afgeronde waarde van " + kommaGetal + " is: " + Math.floor(kommaGetal) + "<br>");
+            var randomGetal = Math.random() * 9;
+            document.write("Dit is een random waarde: " + randomGetal + "<br>");
+            document.write("Dit is een geheel getal tussen de 0 en de 8: " + Math.floor(randomGetal) + "<br>")
             var i = 0;
             document.write("<ol>")
-            while( i < 50)
+            while( i < 30)
             {
-                var index = i % 6;
-                //alert(test);
+                var index = i % 9;
                 document.write("<li>" + auto[index] + "</li>");
                 i += 1;
             }
