@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML DOM</title>
+        <style>
+            body
+            {
+                font-family: Verdana;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>HTML DOM</h1>
+
+        <p id="test" style="background-color: blue;">Dit is wat tekst</p>
+
+        <button id="button1">Verander CSS</button>
+
+        <button id="button2">Verklein de lijndikte</button>
+
+        <script>
+
+           var ptag = document.getElementById("test");
+
+           var button1 = document.getElementById("button1");
+
+           var button2 = document.getElementById("Button2");
+
+           var color = ["pink", "green", "red", "orange", "black"];
+
+           var lineThickness = 2;
+
+           button1.onclick = function()
+           {
+               //alert("Ik stop de code even tot je op enter drukt");
+               ptag.innerHTML = "Ik heb de tekst veranderd met javascript";
+               ptag.style.color = "white";
+               ptag.style.border = lineThickness + "px solid " + color[Math.floor(Math.random() * 5)];
+               ptag.style.backgroundColor = color[Math.floor(Math.random() * 5)];
+               lineThickness += 5;
+           }
+
+           button2.onclick = function()
+           {
+              lineThickness -= 5;
+           }
+           
+           
+        </script>
+
+        
+    </body>
+</html>
