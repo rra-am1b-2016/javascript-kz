@@ -7,9 +7,38 @@
             {
                 font-family: Verdana;
             }
+            img
+            {
+                width: 200px;
+            }
+
+            table, td
+            {
+                border: 2px solid green;
+            }
         </style>
     </head>
     <body>
+        <h1>Eenarmige Bandiet</h1>
+
+        <script> 
+            var pictureArray = ["aardbei.jpg", "banaan.jpg", "avocado.jpg", "framboos.jpg", "appel.jpg", "sinaasappel.png"];
+        
+            
+            document.write("<table>" +
+                                "<tr>" +
+
+                                    "<td><img src='./images/" + pictureArray[Math.floor(Math.random() * 6)]  + "' alt='fruit'></td>" + 
+                                    "<td><img src='./images/" + pictureArray[Math.floor(Math.random() * 6)]  + "' alt='fruit'></td>" +
+                                    "<td><img src='./images/" + pictureArray[Math.floor(Math.random() * 6)]  + "' alt='fruit'></td>" +
+                                "</tr>" +
+                            "</table>");
+
+                
+        </script>
+
+
+
         <h1>Javascript While Loop met break en auto's</h1>
         
         <script>
@@ -25,7 +54,7 @@
                 if ( auto[index] == "Fiat")
                 {
                     //document.write("index heeft nu de waarde 2, Deze heeft de waarde: " + auto[index]);                    
-                    continue;
+                    break;
                 }
                 document.write("<li>" + auto[index] + "</li>");
                 i += 1;
@@ -45,7 +74,7 @@
                 var index = Math.random() * 9;
                 var index = Math.floor(index);
 
-                if ( auto[index] == "Fiat")
+                if ( auto[index] == "Meloen")
                 {
                     //document.write("index heeft nu de waarde 2, Deze heeft de waarde: " + auto[index]);                    
                     continue;
@@ -55,7 +84,5 @@
             }
             document.write("</ol>");
         </script>
-
-
     </body>
 </html>
