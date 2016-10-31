@@ -11,12 +11,19 @@
     </head>
     <body>
         <h1>HTML DOM</h1>
-
-        <p id="test" style="background-color: blue;">Dit is wat tekst</p>
-
         <button id="button1">Verander CSS</button>
 
         <button id="button2">Verklein de lijndikte</button>
+
+        <button id="button3">Vergroten font-size</button>
+
+        <button id="button4">Lees getal in</button>
+
+        Voer een getal in: <input type="text" id="getal1">
+
+        <p id="test" style="background-color: blue;">Dit is wat tekst</p>
+
+        
 
         <script>
 
@@ -24,11 +31,26 @@
 
            var button1 = document.getElementById("button1");
 
-           var button2 = document.getElementById("Button2");
+           var button2 = document.getElementById("button2");
+
+           var button3 = document.getElementById("button3");
+
+           var button4 = document.getElementById("button4");
+
+
 
            var color = ["pink", "green", "red", "orange", "black"];
 
            var lineThickness = 2;
+           var fontSizeValue = 2;
+
+           button4.onclick = function()
+           {
+              var getal = document.getElementById("getal1").value;
+              getal = parseFloat(getal);
+              //alert(getal );
+              ptag.innerHTML = getal;
+           }
 
            button1.onclick = function()
            {
@@ -43,8 +65,22 @@
            button2.onclick = function()
            {
               lineThickness -= 5;
+              ptag.style.borderWidth = lineThickness + "px";
            }
-           
+
+           button3.ondblclick = function()
+           {
+              fontSizeValue -= 5;
+              ptag.style.fontSize = fontSizeValue + "px";
+           }  
+
+           button3.onclick = function()
+           {
+              fontSizeValue += 5;
+              ptag.style.fontSize = fontSizeValue + "px";
+           }
+
+               
            
         </script>
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM methods</title>
+        <style>
+            body
+            {
+                font-family: Verdana;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>DOM method getElementsByTagName()</h3> 
+        <ol>
+               <li>Maandag</li>
+               <li>Dinsdag</li>
+               <li>Woensdag</li>
+               <li>Donderdag</li>
+               <li>Vrijdag</li>
+               <li>Zaterdag</li>
+               <li>Zondag</li>
+         </ol> 
+
+         <button onclick="changeLiText()">Verander &lt;li&gt; tekst</button>
+
+        
+
+        
+    </body>
+</html>
+
+<script>
+   function changeLiText()
+   {
+      var liArray;
+      liArray = document.getElementsByTagName("li");
+      console.debug(liArray);
+      var tekst = "<ol>";
+      for (var i = (liArray.length - 1); i >= 0; i--)
+      {
+         tekst += "<li>" + liArray[i].innerHTML + ", dit is dag " + (i + 1) + "</li>";
+      }
+      tekst += "<ol>";
+
+      document.write(tekst);
+   }
+</script>
