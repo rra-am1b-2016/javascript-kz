@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>DOM getElementsByClassName</title>
+   </head>
+   <body>
+      <ol>  
+         <li class="odd">Appel</li>
+         <li>Sinaasappel</li>
+         <li class="odd">Banaan</li>
+         <li>Kiwi</li>
+         <li class="odd">Mandarijn</li>
+         <li>Kersen</li>
+         <li class="odd">Sharonfruit</li>
+         <li>Mango</li>
+         <li class="odd">Grapefruit</li>
+         <li>Meloen</li>
+      </ol>
+      <button onclick="makeRed()">Maak oneven rijen rood</button>
+   </body>
+</html>
+
+<script>
+ function makeRed()
+ {
+    // alert("Hallo");
+    var oddRows = document.getElementsByClassName("odd");
+
+    while()
+    oddRows[0].style.backgroundColor = "red";
+
+
+ }
+
+</script>
