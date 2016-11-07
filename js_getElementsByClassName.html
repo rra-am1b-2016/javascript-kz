@@ -2,6 +2,14 @@
 <html>
    <head>
       <title>DOM getElementsByClassName</title>
+      <style>
+        .even
+        {
+          background-color = "red";
+          border = "2px solid green";
+          width = "200px";  
+        }    
+      </style>
    </head>
    <body>
       <ol>  
@@ -17,6 +25,7 @@
          <li>Meloen</li>
       </ol>
       <button onclick="makeRed()">Maak oneven rijen rood</button>
+      <button onclick="addEvenRow()">Maak even rijen blauw</button>
    </body>
 </html>
 
@@ -25,11 +34,39 @@
  {
     // alert("Hallo");
     var oddRows = document.getElementsByClassName("odd");
+    //console.debug(oddRows);
+    var i = 0;
+    while( i < oddRows.length)
+    {
+      
+      oddRows[i].style.backgroundColor = "red";
+      oddRows[i].style.border = "2px solid green";
+      oddRows[i].style.width = "200px";      
+      i++;
+    }
+   
 
-    while()
-    oddRows[0].style.backgroundColor = "red";
+ }
 
+ function addEvenRow()
+ {
+    // Selecteer alle li tags
+    Rows = document.getElementsByTagName("li");
 
+    // Selecteer alle even li tags en geef deze het attribuut class='even'
+    for ( var i = 0; i < Rows.length; i++)
+    {
+      if ( i%2 == 1)
+      Rows[i].setAttribute("class", "even" );
+    }
+
+    var evenRows = document.getElementsByClassName("even");
+    for ( var i=0; i < evenRows.length; i++)
+    {
+        evenRows[i].style.backgroundColor = "yellow";
+        evenRows[i].style.border = "2px solid pink";
+        evenRows[i].style.width = "200px"; 
+    }
  }
 
 </script>
