@@ -39,7 +39,10 @@
         var child = document.getElementsByTagName("li");
         
         console.debug(child);
-        parent.removeChild(child[child.length - 1])
+        if (child.length > 0)
+        {
+            parent.removeChild(child[child.length - 1]);
+        }
     }
 
 </script>
