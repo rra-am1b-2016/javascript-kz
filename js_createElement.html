@@ -1,0 +1,45 @@
+    <!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style>
+            body
+            {
+                font-family: Verdana;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Create Element</h3>
+        <button onclick="add_li();">Voeg li-tag toe!</button>
+        <button onclick="remove_li();">Verwijder li-tag!</button>
+        <ol id="list">                     
+        </ol>      
+
+        
+    </body>
+</html>
+
+<script>
+    function add_li()
+    {
+        // Maak een li-tag
+        var listItem = document.createElement("li");
+        var tekst = document.createTextNode("Dit is een test");
+        listItem.appendChild(tekst);
+        // Selecteer de ol-tag waar de li-tag ingestopt moet worden
+        var orderedlist = document.getElementById("list");
+        orderedlist.appendChild(listItem);
+    }
+
+    function remove_li()
+    {
+        //alert("hallo");
+        var parent = document.getElementById("list");
+        var child = document.getElementsByTagName("li");
+        
+        console.debug(child);
+        parent.removeChild(child[child.length - 1])
+    }
+
+</script>
