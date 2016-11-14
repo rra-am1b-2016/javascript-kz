@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>querySelectorAll</title>
+      <style>
+         .odd
+         {
+            background-color: red;
+            border: 2px solid black;
+            width: 100px;
+            color: black;
+         }
+         
+         .even
+         {
+            background-color: green;
+            border: 2px solid black;
+            width: 100px;
+            color: black;
+         }
+
+      </style>
+   </head>
+   <body>
+      <ol class="list">
+         <li class="odd">komkommer</li>
+         <li>sla</li>
+         <li class="odd">paprika</li>
+         <li>banaan</li>
+         <li class="odd">appel</li>
+         <li>mandarijn</li>
+         <li class="odd">kiwi</li>
+         <li>meloen</li>
+         <li class="odd">rode bes</li>
+         <li>blauwe bes</li>
+      </ol>
+
+      <button onclick="change_background_odd();">Change background!</button>
+      <button onclick="change_background_even();">Change background!</button>
+      <button onclick="herlaadPagina();">Laad de pagina opnieuw</button>
+   </body>
+</html>
+
+<script>
+   function change_background_odd()
+   {
+      var odd = document.querySelectorAll(".odd");
+
+      for (var i = 0; i < odd.length; i++)
+      {
+         odd[i].style.backgroundColor = "yellow";         
+      }
+   }
+
+   function change_background_even()
+   {
+      var even = document.getElementsByTagName("li");
+
+      for ( var j = 0; j < even.length; j++)
+      {
+         var i = 2 * j + 1;
+         if ( i < even.length)
+         {
+            even[i].setAttribute("class", "even");
+         }
+      }
+   }
+
+   function herlaadPagina()
+   {
+      location.reload();
+   }
+
+</script>
