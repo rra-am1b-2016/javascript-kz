@@ -36,13 +36,18 @@
          <li>blauwe bes</li>
       </ol>
 
-      <button onclick="change_background_odd();">Change background!</button>
-      <button onclick="change_background_even();">Change background!</button>
-      <button onclick="herlaadPagina();">Laad de pagina opnieuw</button>
+      <button id="btn_1">Change background!</button>
+      <button id="btn_2">Change background!</button>
+      <button id="btn_3">Laad de pagina opnieuw</button>
    </body>
 </html>
 
 <script>
+   document.getElementById("btn_1").onclick = change_background_odd;
+   document.getElementById("btn_2").onclick = change_background_even;
+   document.getElementById("btn_3").addEventListener("mouseover", herlaadPagina);
+  
+
    function change_background_odd()
    {
       var odd = document.querySelectorAll(".odd");
