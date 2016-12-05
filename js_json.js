@@ -8,6 +8,7 @@ var credentials = '{"firstname": "Arjan",' +
                    '"schoenmaat": 10.5, ' + 
                    '"favoColors": ["yellow", "green", "red"], ' +    // Ook array's zijn mogelijk
                    '"auto": [{"merk": "Ford", "Type": "mondeo", "Kenteken": "51-HB-ZP"}, ' + 
+                            '{"merk": "Citroen", "Type": "SAXO 1.5D", "Kenteken": "23-TP-QW"}, ' +
                             '{"merk": "Daf", "Type": "variomatic", "Kenteken": "52-IC-AQ"}], ' +  //ook objecten
                    '"married": true }';  // en booleans
 
