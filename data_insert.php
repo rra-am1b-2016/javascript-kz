@@ -12,8 +12,12 @@
                                   `lastname`)
              VALUES              (NULL,
                                   '".$_GET["firstname"]."',
-                                  'de',
-                                  'Bakker')";
+                                  '".$_GET["infix"]."',
+                                  '".$_GET["lastname"]."')";
 
    $result = mysqli_query($conn, $query);
+
+   // Maak een JSON string met daarin een variabele met een succesmeld waarde.
+
+   echo '{"succesmelding": "Het opslaan is gelukt hoor!"}';
 ?>

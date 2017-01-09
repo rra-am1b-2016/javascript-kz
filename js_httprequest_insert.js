@@ -3,13 +3,19 @@ document.getElementsByTagName("button")[0].onclick = function(){
    var infix = document.getElementsByName("infix")[0].value;
    var lastname = document.getElementsByName("lastname")[0].value;
 
-   alert("De ingevulde naam is: " + firstname + infix + lastname); 
-
-
    var xmlhttp = new XMLHttpRequest();
 
-   xmlhttp.open("GET", "http://localhost/2016-2017/am1b/javascript-kz/data_insert.php?firstname=" + firstname + "&infix=", true);
-   xmlhttp.send();
+   xmlhttp.onreadystatechange = function(){
+      if ( xmlhttp.readyState == 4 && xmlhttp.status == 200)
+      {
+         var jsObj = JSON.parse(xmlhttp.responseText); 
+         document.getElementsByTagName("p")[0].innerHTML = jsObj.succesmelding;
+      }
+   }
 
+   xmlhttp.open("GET", "http://localhost/2016-2017/am1b/javascript-kz/data_insert.php?firstname=" + firstname 
+                        + "&infix=" + infix
+                        + "&lastname=" + lastname, true);
+   xmlhttp.send();
 
 }
