@@ -13,3 +13,14 @@ p
 {
    font-family: Verdana;
 }
+
+div
+{
+   width: 20px;
+   height: 20px;
+   border: 2px solid black;
+   background-color: yellow;
+   display: inline-block;
+   text-align: center;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
