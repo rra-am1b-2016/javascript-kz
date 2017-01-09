@@ -8,10 +8,10 @@
       $id = 1;
    }
 
-   $server_name = "	mysql.hostinger.nl";
-   $user_name = "u533841462_rra";
-   $password = "Ezekkthoes!1";
-   $db_name = "u533841462_rra";
+   $server_name = "localhost";
+   $user_name = "root";
+   $password = "";
+   $db_name = "am1b_2016_ajax";
 
    $conn = mysqli_connect($server_name, $user_name, $password, $db_name);
 
